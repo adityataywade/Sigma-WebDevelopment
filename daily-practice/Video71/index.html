@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Nothing </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    .contenier{
+        display: flex;
+        
+    }
+    .box{
+        display: flex;
+        margin: 25px;
+        padding: 24px;
+        border: 2px solid black;
+        width: 35px;
+        background-color: aqua;
+
+    }
+</style>
+    </head>
+    <body>
+        <div class="card">
+
+            <div class="box">Box1 i am the inner text </div>
+            <div class="box">Box2</div>
+            <div class="box">Box3</div>
+            <div class="box">Box4</div> 
+            <div hidden> I am Hidden </div>
+        </div>
+
+<script>
+    document.querySelector(".box").innerHTML
+    document.querySelector(".box").outerHTML;
+    document.querySelector(".box").innerText;
+    document.querySelector(".box").outerText;
+    // document.querySelector(".box").hidden="true";
+
+
+    /**********Attributes***********/
+ document.querySelector(".box").getAttribute("style")
+
+const temp=document.createElement("div");
+        temp.className="itsme";
+        temp.innerHTML="Hello HTml";
+        // document.querySelector(".card").append(temp);
+//  document.querySelector(".card").prepend(temp);
+//  document.querySelector(".card").before(temp);
+//  document.querySelector(".card").after(temp);
+
+
+//  document.querySelector(".card").replaceWith(temp);            ***************
+
+
+
+</script>
+
+
+
+    </body>
+</html>

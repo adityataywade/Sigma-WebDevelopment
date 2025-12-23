@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    #card-container {
+      width: 87%;
+      background: #1a1818;
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      /* 👉 Side-by-side */
+      overflow: hidden;
+      margin: 20px auto;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+
+      padding: 12px;
+    }
+
+    /* Entire Card */
+    .card {
+      width: 70%;
+      background: #181818;
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      overflow: hidden;
+      margin: 20px;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Thumbnail Wrapper (to position duration) */
+    .thumbnail-wrapper {
+      position: relative;
+      /* 👉 Needed for absolute badge */
+      width: 30%;
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* Duration Badge */
+    .duration {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 3px 6px;
+      font-size: 12px;
+  
+      border-radius: 4px;
+    }
+
+    .info {
+      padding: 12px;
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .meta {
+      font-size: 14px;
+      font-weight: 500;
+      color: #aaa;
+    }
+
+
+    /*  make it responsive */
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .thumbnail-wrapper {
+        width: 100%;
+      }
+
+      .info {
+        width: 100%;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .card {
+        flex-direction: column;
+      }
+
+      .thumbnail-wrapper {
+        width: 100%;
+      }
+
+      .info {
+        width: 100%;
+      }
+    }
+
+
+  .btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+    /* style button */
+    button {
+      margin: auto;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5%;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="card-container"></div>
+  <div class="btn-container">
+    <button id="btn">click to create card</button>
+  </div>
+
+
+  <script>
+    
+        const card = document.createElement("div");  //Create 
+        card.className = "card";  //naming 
+        // card.innerText="Hello";
+        // document.getElementById("card-container").append(card);
+  
+
+        const thumnail = document.createElement("div");  //Create 
+        thumnail.className = "thumnail";  //naming 
+
+        const img = document.createElement("img");  //Create 
+        img.className = "Image"; 
+        img.src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw" ; 
+        // document.querySelector(".card").append(img); use this when we have the Element in Html tage not created in the js 
+        // document.querySelector(".card").append(img);  this also works but not as useful 
+        card.append(img);
+                 
+  </script>
+</body>
+</html>
